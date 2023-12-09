@@ -20,10 +20,10 @@ side_latch=radius-8;
 rotate([0,180,0])
 difference(){
 	hull() {
-		translate([0,-10,0])
-		cylinder(r=4, h=6, center=true);
-		translate([0,10,0])
-		cylinder(r=4, h=6, center=true);
+		translate([0,-10,0.5])
+		cylinder(r=4, h=7, center=true);
+		translate([0,10,0.5])
+		cylinder(r=4, h=7, center=true);
 	}
 
 	// LIR1632
@@ -40,13 +40,13 @@ difference(){
 	translate([1.5,10.5,-3.01])
 		rotate([180, 0, 0])
 			magnet_hold(4.25,1.9);
-	translate([0,8,0])
-		cylinder(r=0.3, h=10, center=true);
-	translate([-2,8.2,0])
-		cylinder(r=0.3, h=10, center=true);
+	translate([0,8.2,0]) // Anode
+		cylinder(r=0.5, h=10, center=true);
+	translate([-2,8.5,0]) // Cathode
+		cylinder(r=0.5, h=10, center=true);
 	translate([-2,-8.1,-2])
-		cylinder(r=0.3, h=5, center=true);
+		cylinder(r=0.5, h=5, center=true);
 	translate([-2,-6,-0.5])
 		rotate([90, 0, 0])
-		cylinder(r=0.3, h=5, center=true);
+		cylinder(r=0.5, h=5, center=true);
 }
