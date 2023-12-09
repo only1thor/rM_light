@@ -1,27 +1,18 @@
 // flex
 $fn=50;
 
-module magnet_hold(width){
-//	width=8.2;
-	thickness=1;
-	radius=0.25;
-
+module magnet_hold(width,thickness){
+	rotate([180,0,0])
 	difference(){
-		cube([width,width,thickness],center=true);
 
-		translate([width/2,width/5,0])
-		cylinder(h=1.1,r=radius,center=true);
+		cylinder(h=thickness,r=width/2);
 
-		translate([-width/2,width/5,0])
-		cylinder(h=1.1,r=radius,center=true);
-
-		translate([width/2,-width/5,0])
-		cylinder(h=1.1,r=radius,center=true);
-
-		translate([-width/2,-width/5,0])
-		cylinder(h=1.1,r=radius,center=true);
+		translate([-width/1.8,0,0.02])
+		sphere(r=0.5);
+		translate([width/1.8,0,0.02])
+		sphere(r=0.5);
 	}
 }
 
-//magnet_hold(8.2,1);
-//cylinder(h=1,r=width/2);
+// tested, and working values:
+//magnet_hold(4.25,1.9);
