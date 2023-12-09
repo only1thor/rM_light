@@ -4,7 +4,7 @@ module reed_hold(){
 	cube(size=[25, 0.6, 6], center=true);
 	difference()
 	{
-		cube(size=[14, 2.1, 2.1], center=true);
+		cube(size=[14, 2.2, 2.2], center=true);
 		translate([0, -1.2, -1.2]) 
 		sphere(r=0.5);
 		translate([0, 1.2, -1.2]) 
