@@ -32,11 +32,16 @@ difference(){
 		cylinder(r=0.6, h=10, center=true);
 	translate([-2,8.5,0]) // Cathode
 		cylinder(r=0.6, h=10, center=true);
-	translate([-2,-8.1,-0.5])
+	translate([-2,8.5,-2.5]) // Cathode connection
+		cylinder(r=0.9, h=2, center=true);
+	translate([-2,4.1,-0.5])
+		rotate([50, 0, 0])
 		cylinder(r=0.6, h=6, center=true);
 	translate([-2,-0.3,0.5])
 		rotate([90, 0, 0])
 		cylinder(r=0.5, h=15, center=true);
+	translate([-2,-9,-1])
+		cube([0.5,5,6], center=true);
 }
 /* 
 
