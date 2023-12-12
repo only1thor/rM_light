@@ -20,7 +20,7 @@ difference(){
 		cube([20,15.75,3.25], center=true);
 	}
 	reed_hold_displacement_x=2.;
-	translate([reed_hold_displacement_x,0.2,-1.96])
+	translate([reed_hold_displacement_x,0.2,-2.])
 		rotate([0, 0, 90])
 			reed_hold();
 	translate([1.4,-16.25,-3.01]){
@@ -33,8 +33,8 @@ difference(){
 			magnet_hold(4.25,1.9);
 	cylinder(r=1, h=80, center=true);
 	}
-	translate([0,8.2,0]) // Anode
-		cylinder(r=0.6, h=10, center=true);
+	translate([0,8,0]) // Anode
+		cylinder(r=0.65, h=10, center=true);
 	translate([-2,9,0]) // Cathode
 		cylinder(r=0.6, h=10, center=true);
 	translate([-2,9,-2.]) // Cathode connection
@@ -52,9 +52,10 @@ difference(){
 			cylinder(r=.9, h=15, center=true);
 	translate([0,9.5,-2.6])
 		cube([5,0.8,1.5], center=true);
-	translate([-2,,-2.6])
-		cube([0.8,5,1.5], center=true);
+/* 	translate([-2,,-2.6])
+		cube([0.8,5,1.5], center=true); */
 }
+
 /* 
 color("red")
 translate([-1,1.5,8])
