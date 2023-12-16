@@ -3,16 +3,30 @@ $fn=50;
 
 size=15.75;
 sphere_translation=-4;
+
+module constraint() {
+    intersection(){
+        union(){
+            translate([0, 0, size/2])
+                cube(size=[8, size*2, size], center=true);
+            translate([-0.75, 0, size/2])
+                rotate([0, -40, 0])
+                    cube(size=[15, size*2, size], center=true);
+        }
+        translate([-4.5, 0, size/2])
+            cube(size=[17, size*2, size], center=true);
+    }
+}
+
 difference() {
 	intersection(){
-		translate([-0.25,0,5])
-		cube([6.5,30,10],center=true);
+		constraint();
 		translate([sphere_translation, 0, 0])
 		scale([1,1,0.65]) 
 		sphere(size-1.5);
 	}
-	translate([0.25,0,5.25])
-	cube([7,30,10],center=true);
-	translate([0.5,9,0])
-	cube([7,5,1],center=true);
+	translate([0.25,0,0.25])
+	constraint();
+	translate([0.5,8.5,0])
+	cube([7,3,1],center=true);
 }
