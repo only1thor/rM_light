@@ -5,7 +5,7 @@ use <hood.scad>;
 
 $fn=150;
 
-rotate([0,0,0]){
+rotate([0,90,0]){
 	difference(){
 		hull() {
 			translate([0,-15.75,1])
